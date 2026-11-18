@@ -1,65 +1,74 @@
-Aplikacija: Txtura (com.txtura)
+# Politika privatnosti: Txtura (`com.txtura`)
 
-Datum: 18. novembar 2026. godine
-1. Uvod i osnovna načela
+**Datum:** 18. novembar 2026. godine
 
-Txtura je napravljena po principu zaštite privatnosti na prvom mestu (Privacy by Design). Aplikacija služi kao podrazumevani klijent za razmenu SMS i MMS poruka na Android operativnom sistemu.
-Lokalna obrada podataka: Svi vaši podaci (poruke, kontakti, multimedija i podešavanja) obrađuju se i čuvaju isključivo lokalno na vašem uređaju.
-Bez eksternih servera i analitike: Txtura ne prikuplja, ne čuva na udaljenim serverima, ne analizira, ne prodaje niti deli vaše podatke. Aplikacija ne sadrži Google/Firebase analitiku, reklamne mreže niti bilo koje SDK module trećih lica za praćenje.
+---
 
-2. Podaci koje aplikacija obrađuje i sistemske dozvole
+## 1. Uvod i osnovna načela
 
-A. Dozvole koje se traže pri prvom pokretanju (osnovna funkcionalnost):
+Txtura je razvijena po principu **zaštite privatnosti na prvom mestu** (*Privacy by Design*). Aplikacija služi kao podrazumevani klijent za razmenu SMS i MMS poruka na Android operativnom sistemu.
 
-1.
-SMS i MMS (READ_SMS, SEND_SMS, RECEIVE_SMS, RECEIVE_MMS, RECEIVE_WAP_PUSH):
-Svrha: Čitanje, sastavljanje, slanje i prijem SMS/MMS poruka.
-Obrada: Isključivo lokalno preko sistemskog Android provajdera i lokalne baze uređaja.
+* **Lokalna obrada podataka:** Svi vaši podaci (poruke, kontakti, multimedija i podešavanja) obrađuju se i čuvaju isključivo lokalno na vašem uređaju.
+* **Bez eksternih servera i analitike:** Txtura ne prikuplja, ne čuva na udaljenim serverima, ne analizira, ne prodaje niti deli vaše podatke. Aplikacija ne sadrži Google/Firebase analitiku, reklamne mreže, niti bilo koje SDK module trećih lica za praćenje.
 
-2.
-Kontakti (READ_CONTACTS):
-Svrha: Prikaz imena, profilnih slika i inicijala kontakata umesto brojeva telefona, kao i pretraga kontakata pri slanju.
-Obrada: Isključivo u režimu čitanja na samom uređaju. Podaci o kontaktima se nikada ne izvoze.
+---
 
-3.
-Obaveštenja (POST_NOTIFICATIONS na Android 13+):
-Svrha: Prikaz lokalnih sistemskih obaveštenja o pristiglim porukama i brzi odgovori.
+## 2. Podaci koje aplikacija obrađuje i sistemske dozvole
 
-4.
-Uloga podrazumevane SMS aplikacije (Default SMS App):
-Svrha: Neophodan sistemski status da bi aplikacija imala pravo da šalje i prima SMS/MMS poruke.
+### A. Dozvole pri prvom pokretanju (osnovna funkcionalnost)
 
-B. Dozvole na zahtev (traže se isključivo ako korisnik pokrene radnju):
+1. **SMS i MMS** (`READ_SMS`, `SEND_SMS`, `RECEIVE_SMS`, `RECEIVE_MMS`, `RECEIVE_WAP_PUSH`)
+* **Svrha:** Čitanje, sastavljanje, slanje i prijem SMS/MMS poruka.
+* **Obrada:** Isključivo lokalno preko sistemskog Android provajdera i lokalne baze uređaja.
 
-1.
-Kamera (CAMERA):
-Svrha: Snimanje fotografije za slanje u MMS poruci.
-Kada: Isključivo kada korisnik klikne na ikonu kamere u traci za unos.
+2. **Kontakti** (`READ_CONTACTS`)
+* **Svrha:** Prikaz imena, profilnih slika i inicijala kontakata umesto telefonskih brojeva, kao i pretraga kontakata pri unosu primaoca.
+* **Obrada:** Isključivo u režimu čitanja na samom uređaju. Podaci o kontaktima se nikada ne izvoze.
 
-2.
-Mikrofon (RECORD_AUDIO):
-Svrha: Snimanje glasovne poruke kao MMS audio prilog.
-Kada: Isključivo kada korisnik pritisne i drži dugme mikrofona.
+3. **Obaveštenja** (`POST_NOTIFICATIONS` na Android 13+)
+* **Svrha:** Prikaz lokalnih sistemskih obaveštenja o pristiglim porukama i funkcija brzih odgovora.
 
-3.
-Kalendar (READ_CALENDAR):
-Svrha: Odabir i deljenje detalja o terminu/događaju u poruci.
-Kada: Isključivo na klik na „Događaj iz kalendara“ u meniju priloga.
+4. **Uloga podrazumevane SMS aplikacije** (*Default SMS App*)
+* **Svrha:** Obavezan sistemski status kako bi aplikacija imala pravo da šalje i prima SMS/MMS saobraćaj.
 
-C. Mrežne dozvole (INTERNET, ACCESS_NETWORK_STATE, CHANGE_NETWORK_STATE):
-Svrha: Isključivo za mobilni prenos podataka sa MMSC centrom vašeg mobilnog operatera radi slanja/prijema MMS sadržaja (APN prenos) i opcionu proveru ažuriranja verzije aplikacije.
+### B. Dozvole na zahtev (traže se samo na inicijativu korisnika)
 
-3. Deljenje podataka sa trećim licima
-Txtura ne deli podatke sa trećim licima.
-Slanje SMS i MMS poruka vrši se preko mreže vašeg mobilnog operatera u skladu sa vašim korisničkim ugovorom sa operaterom.
-Nema integrisanih alata za oglašavanje, telemetriju ili praćenje navika korisnika.
+1. **Kamera** (`CAMERA`)
+* **Svrha:** Snimanje fotografija za slanje u MMS poruci.
+* **Aktivacija:** Isključivo kada dodirnete ikonu kamere u traci za unos.
 
-4. Bezbednost i zaštita podataka
-Zabrana nezaštićenog bekapovanja: Korišćenjem konfiguracije android:allowBackup="false" onemogućeno je neovlašćeno izvlačenje SMS poruka putem nesigurnih eksternih alata.
-Kriptografska zaštita bekapa: Ručni bekap poruka štiti se snažnom AES-GCM-256 enkripcijom uz PBKDF2 izvođenje ključa sa korisničkom lozinkom.
-Uklanjanje osetljivih metapodataka: Aplikacija automatski uklanja EXIF GPS koordinate lokacije iz fotografija pre slanja MMS-a.
-Biometrijsko zaključavanje: Podržano je zaključavanje aplikacije otiskom prsta/licem ili sistemskim PIN-om uređaja.
+2. **Mikrofon** (`RECORD_AUDIO`)
+* **Svrha:** Snimanje glasovne poruke kao MMS audio priloga.
+* **Aktivacija:** Isključivo kada pritisnete i zadržite dugme mikrofona.
 
-5. Brisanje i zadržavanje podataka
-Korisnik samostalno upravlja podacima: brisanjem poruke ili razgovora podaci se odmah trajno uklanjaju sa uređaja.
-Deinstalacijom aplikacije brišu se svi prateći keširani podaci i lokalna baza.
+3. **Kalendar** (`READ_CALENDAR`)
+* **Svrha:** Izbor i deljenje detalja o terminu ili događaju direktno u poruci.
+* **Aktivacija:** Isključivo odabirom stavke „Događaj iz kalendara“ u meniju priloga.
+
+### C. Mrežne dozvole (`INTERNET`, `ACCESS_NETWORK_STATE`, `CHANGE_NETWORK_STATE`)
+
+* **Svrha:** Isključivo za mobilni prenos podataka sa MMSC centrom vašeg mobilnog operatera radi slanja/prijema MMS sadržaja (APN prenos) i opcionu proveru ažuriranja verzije aplikacije.
+
+---
+
+## 3. Deljenje podataka sa trećim licima
+
+* Txtura **ne deli** podatke sa trećim licima.
+* Slanje SMS i MMS poruka obavlja se direktno preko mreže vašeg mobilnog operatera, u skladu sa vašim korisničkim ugovorom sa operaterom.
+* U aplikaciji nema integrisanih servisa za oglašavanje, telemetriju ili praćenje ponašanja korisnika.
+
+---
+
+## 4. Bezbednost i zaštita podataka
+
+* **Zabrana nezaštićenog bekapovanja:** Konfiguracijom `android:allowBackup="false"` onemogućeno je neovlašćeno izvlačenje SMS baze preko nesigurnih eksternih ili ADB alata.
+* **Kriptografska zaštita bekapa:** Ručni bekap poruka obezbeđen je **AES-GCM-256** enkripcijom uz **PBKDF2** izvođenje ključa zasnovano na korisničkoj lozinki.
+* **Uklanjanje osetljivih metapodataka:** Aplikacija pre slanja MMS-a automatski uklanja EXIF GPS koordinate lokacije iz slika.
+* **Biometrijsko zaključavanje:** Podržano je zaključavanje pristupa aplikaciji putem otiska prsta, prepoznavanja lica ili sistemskog PIN-a uređaja.
+
+---
+
+## 5. Brisanje i zadržavanje podataka
+
+* **Korisnička kontrola:** Brisanjem poruke ili celog razgovora podaci se istog trenutka trajno uklanjaju sa uređaja.
+* **Deinstalacija:** Uklanjanjem aplikacije sa uređaja automatski se brišu svi prateći keširani podaci i lokalna baza.
