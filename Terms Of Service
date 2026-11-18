@@ -1,0 +1,241 @@
+# Terms of Service for Txtura
+
+**Last updated:** November 18, 2026
+
+**Document version:** 1.0
+
+**Application:** Txtura (Package: `com.txtura`)
+
+**Copyright Holder / Developer:** Arpad Vengrin
+
+**Contact:** vengrinarpad@gmail.com
+
+---
+
+## 1. Acceptance of Terms
+
+By downloading, installing, accessing, or using the mobile application **Txtura** (hereinafter referred to as the "Application" or "Software"), you agree to be bound by these Terms of Service (hereinafter referred to as the "Terms").
+
+If you do not agree to any provision of these Terms, do not install or use this Application.
+
+---
+
+## 2. Nature of the Application and How It Works
+
+Txtura is an open-source application designed for the Android operating system that functions as a client for receiving, reading, managing, and sending SMS and MMS messages.
+
+* **On-Device Client Software:** Txtura is a standalone application operating exclusively locally on your mobile device.
+* **No Proprietary Server or Messaging Service:** Txtura neither owns nor operates a telecommunications network. The transmission, billing, and delivery of SMS/MMS content are handled entirely by your mobile telecommunications carrier (mobile network).
+
+---
+
+## 3. Mobile Carrier Rates and Fees
+
+Using the Application to send and receive SMS and MMS messages is subject to your mobile carrier's rate plan:
+
+* **Messaging and Data Charges:** Sending SMS and MMS messages, as well as data consumption required to download MMS content over the mobile network, may incur charges in accordance with your contract with your mobile carrier (including roaming fees).
+* **The Application is Free:** Txtura does not charge for messaging, requires no subscription, and has no hidden fees. All telecommunication fees are billed exclusively by your mobile carrier.
+
+---
+
+## 4. Acceptable Use and User Responsibility
+
+As a user of the Application, you agree that you will:
+
+1. Not use the Application for any unlawful, fraudulent, or malicious activities in violation of applicable laws and regulations.
+2. Not use the Application to transmit unsolicited bulk messages (SPAM), or threatening, harassing, abusive, or malicious content.
+3. Not attempt to modify the Application in any manner that compromises the security of other users or telecommunications networks, or abuses system resources.
+4. Bear sole responsibility for the content of messages composed and transmitted through your device and SIM card.
+
+---
+
+## 5. Emergency Services and Emergency Calls/Messages
+
+Although Txtura supports receiving Wireless Emergency Alerts and sending SMS messages:
+
+* Sending SMS messages to emergency services (e.g., 112, 911, or local police/medical emergency numbers) depends entirely on the technical support and coverage provided by your mobile carrier and local authorities.
+* **Recommendation:** In life-threatening situations or emergencies, **always make a direct voice call to emergency services** rather than sending text messages.
+
+---
+
+## 6. Privacy and Data Protection
+
+Your privacy is our priority. All conversations, messages, contacts, and attachments remain strictly on your device and are never transmitted to the author of the Application or any third parties.
+
+For detailed information on how the Application accesses system permissions and protects your data, please refer to our [Privacy Policy](PRIVACY_POLICY.md), which constitutes an integral part of these Terms.
+
+---
+
+## 7. Intellectual Property and Open-Source Licensing
+
+* **License:** Txtura is open-source software distributed under the terms of the **GNU General Public License Version 3 (GPLv3)**.
+* **Your Rights:** You have the right to inspect, modify, and redistribute the Application's source code, provided you adhere to the terms of the GPLv3 license (any redistributed or modified version must also be open-sourced under the same GPLv3 license and preserve the author's copyright notices).
+* **Trademarks and Visual Identity:** The name "Txtura", the logo, and accompanying unique visual elements are the property of the author and may not be used for commercial purposes without prior written consent.
+
+---
+
+## 8. Disclaimer of Warranties ("AS IS")
+
+TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW:
+
+* THE SOFTWARE IS PROVIDED "AS IS" AND "AS AVAILABLE", WITHOUT WARRANTIES OF ANY KIND, EITHER EXPRESS OR IMPLIED.
+* THE AUTHOR AND CONTRIBUTORS EXPRESSLY DISCLAIM ALL WARRANTIES, INCLUDING, BUT NOT LIMITED TO, IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, NON-INFRINGEMENT, AND UNINTERRUPTED OR ERROR-FREE OPERATION.
+* THE AUTHOR DOES NOT WARRANT THAT THE APPLICATION WILL OPERATE UNINTERRUPTED, SECURELY, OR ERROR-FREE, NOR THAT EVERY MESSAGE WILL BE SUCCESSFULLY DELIVERED BY YOUR TELECOMMUNICATIONS CARRIER.
+
+---
+
+## 9. Limitation of Liability
+
+IN NO EVENT SHALL THE AUTHOR, DEVELOPERS, OR DISTRIBUTORS OF THE SOFTWARE BE LIABLE FOR:
+
+1. Any direct, indirect, incidental, special, consequential, or punitive damages (including loss of data, loss of profits, business interruption, or mobile carrier charges).
+2. Undelivered, delayed, or altered messages caused by telecommunications network errors, cellular signal issues, power outages, or hardware malfunctions.
+3. Loss of messages resulting from device failure, memory card corruption, or accidental deletion by the user.
+4. Unauthorized physical access to your device resulting from failure to adequately secure the phone with a password, PIN, or biometric lock.
+
+---
+
+## 10. Termination
+
+* You may terminate your use of the Application at any time by ceasing use or uninstalling the Application from your mobile device.
+* Uninstalling the Application terminates all your rights and obligations under these Terms, except for provisions that by their nature survive termination (warranty disclaimers, limitation of liability, and licensing terms).
+
+---
+
+## 11. Amendments to the Terms
+
+We reserve the right to update or modify these Terms of Service periodically to reflect changes in Application functionality or legal requirements.
+
+* The date of the last update will be clearly indicated at the top of this document.
+* Continued use of the Application following the publication of revised Terms constitutes your acceptance of the changes.
+
+---
+
+## 12. Governing Law and Dispute Resolution
+
+These Terms shall be governed by and construed in accordance with the laws of the Republic of Serbia, without giving effect to any conflict of law principles. In the event of any dispute arising out of or related to these Terms, the parties shall endeavor to resolve it amicably; failing which, the competent court of subject-matter jurisdiction shall have jurisdiction.
+
+---
+
+## 13. Contact Information
+
+If you have any questions, feedback, or concerns regarding these Terms of Service, you may contact us at:
+
+* **Email:** vengrinarpad@gmail.com
+* **Author:** Arpad Vengrin
+
+# Uslovi korišćenja usluge (Terms of Service) za Txtura
+
+**Poslednje ažuriranje:** 18. novembar 2026. godine  
+**Verzija dokumenta:** 1.0  
+**Aplikacija:** Txtura (Paket: `com.txtura`)  
+**Nosilac autorskih prava / Programer:** Arpad Vengrin  
+**Kontakt:** vengrinarpad@gmail.com  
+
+---
+
+## 1. Prihvatanje uslova
+
+Preuzimanjem, instaliranjem, pristupanjem ili korišćenjem mobilne aplikacije **Txtura** (u daljem tekstu: „Aplikacija“ ili „Softver“), saglasni ste da budete obavezani ovim Uslovima korišćenja (u daljem tekstu: „Uslovi“).
+
+Ukoliko se ne slažete sa bilo kojom odredbom ovih Uslova, nemojte instalirati niti koristiti ovu Aplikaciju.
+
+---
+
+## 2. Priroda aplikacije i način funkcionisanja
+
+Txtura je aplikacija otvorenog koda (open-source) namenjena operativnom sistemu Android, koja funkcioniše kao klijent za prijem, čitanje, upravljanje i slanje SMS i MMS poruka.
+
+- **Klijentski softver na uređaju:** Txtura je samostalna aplikacija koja radi isključivo lokalno na vašem mobilnom uređaju.
+- **Nema sopstveni server niti servis za razmenu poruka:** Txtura ne poseduje niti upravlja sopstvenom telekomunikacionom mrežom. Prenos poruka, naplata i isporuka SMS/MMS sadržaja u celosti se vrši putem vašeg mobilnog telekomunikacionog operatera (mobilne mreže).
+
+---
+
+## 3. Tarife i naknade mobilnog operatera
+
+Korišćenje Aplikacije za slanje i prijem SMS i MMS poruka podleže tarifnom paketu vašeg mobilnog operatera:
+
+- **Troškovi poruka i prenosa podataka:** Slanje SMS i MMS poruka, kao i prenos podataka neophodan za preuzimanje MMS sadržaja putem mobilne mreže, mogu prouzrokovati troškove u skladu sa ugovorom koji imate sa vašim mobilnim operaterom (uključujući roming tarife).
+- **Aplikacija je besplatna:** Txtura ne naplaćuje slanje poruka, pretplatu, niti ima skrivene troškove. Sve telekomunikacione naknade naplaćuje isključivo vaš mobilni operater.
+
+---
+
+## 4. Pravila korišćenja i odgovornost korisnika
+
+Kao korisnik Aplikacije, obavezujete se da:
+1. Nećete koristiti Aplikaciju za bilo kakve nezakonite, prevvarne ili zlonamerne aktivnosti u suprotnosti sa važećim zakonima i propisima.
+2. Nećete koristiti Aplikaciju za slanje neželjenih masovnih poruka (SPAM), pretećih, uznemirujućih, uvredljivih ili zlonamernih sadržaja.
+3. Nećete pokušavati da modifikujete Aplikaciju na način koji ugrožava bezbednost drugih korisnika, telekomunikacionih mreža ili zloupotrebljava sistemske resurse.
+4. Snosite isključivu odgovornost za sadržaj poruka koje sastavljate i šaljete putem svog uređaja i SIM kartice.
+
+---
+
+## 5. Hitne službe i hitni pozivi/poruke (Emergency Services)
+
+Iako Txtura podržava prijem hitnih sistemskih upozorenja (Wireless Emergency Alerts) i omogućava slanje SMS poruka:
+- Slanje SMS poruka hitnim službama (npr. 112, 911 ili lokalnim brojevima policije/hitne pomoći) zavisi isključivo od tehničke podrške i pokrivenosti vašeg mobilnog operatera i lokalnih vlasti.
+- **Preporuka:** U situacijama opasnim po život ili hitnim slučajevima, **uvek koristite direktan glasovni poziv hitnim službama**, a ne tekstualne poruke.
+
+---
+
+## 6. Privatnost i zaštita podataka
+
+Vaša privatnost nam je na prvom mestu. Svi razgovori, poruke, kontakti i prilozi ostaju isključivo na vašem uređaju i ne prenose se autoru Aplikacije niti trećim licima.
+
+Detaljne informacije o načinu na koji Aplikacija pristupa hardverskim dozvolama i štiti vaše podatke možete pročitati u našem dokumentu [Politika privatnosti (Privacy Policy)](PRIVACY_POLICY.md), koji čini sastavni deo ovih Uslova.
+
+---
+
+## 7. Intelektualna svojina i licenca otvorenog koda
+
+- **Licenca:** Txtura je softver otvorenog koda objavljen pod uslovima licence **GNU General Public License verzija 3 (GPLv3)**.
+- **Vaša prava:** Imate pravo da pregledate, menjate i distribuirate izvorni kod Aplikacije, pod uslovom da se pridržavate odredbi GPLv3 licence (svaka redistribuirana ili izmenjena verzija mora takođe biti otvorena pod istom GPLv3 licencom i sačuvati autorska prava autora).
+- **Žig i vizuelni identitet:** Naziv „Txtura“, logo i prateći unikatni vizuelni elementi vlasništvo su autora i ne mogu se koristiti u komercijalne svrhe bez prethodne saglasnosti.
+
+---
+
+## 8. Odricanje od garancija („AS IS“)
+
+U MAKSIMALNOJ MERI DOZVOLJENOJ MERODAVNIM PRAVOM:
+- SOFTVER SE ISPORUČUJE U VIĐENOM STANJU („AS IS“) I „KAKO JE DOSTUPNO“ („AS AVAILABLE“), BEZ BILO KAKVIH IZRIČITIH ILI IMPLICITNIH GARANCIJA.
+- AUTOR I SARADNICI SE IZRIČITO ODRIČU SVIH GARANCIJA, UKLJUČUJUĆI, ALI NE OGRANIČAVAJUĆI SE NA, IMPLICITNE GARANCIJE O TRŽIŠNOJ VREDNOSTI, POGODNOSTI ZA ODREĐENU SVRHU, NEUGROŽAVANJU PRAVA TREĆIH LICA I NEPREKIDNOM RADU BEZ GREŠAKA.
+- AUTOR NE GARANTUJE DA ĆE APLIKACIJA BITI NEPREKIDNA, BEZBEDNA ILI BEZ GREŠAKA, NITI DA ĆE SVAKA PORUKA BITI USPEŠNO ISPORUČENA OD STRANE TELEKOMUNIKACIONOG OPERATERA.
+
+---
+
+## 9. Ograničenje odgovornosti
+
+NI U KOM SLUČAJU AUTOR, PROGRAMERI NITI DISTRIBUTERI SOFTVERA NEĆE BITI ODGOVORNI ZA:
+1. Bilo kakvu direktnu, indirektnu, slučajnu, posebnu, posledičnu ili kaznenu štetu (uključujući gubitak podataka, propuštenu dobit, prekid poslovanja ili troškove mobilnog operatera).
+2. Neisporučene, zakašnjele ili izmenjene poruke usled grešaka u telekomunikacionoj mreži, problema sa signalom, nestanka struje ili kvarova na uređaju.
+3. Gubitak poruka usled kvara uređaja, oštećenja memorijske kartice ili slučajnog brisanja od strane korisnika.
+4. Neovlašćeni fizički pristup vašem uređaju ukoliko niste adekvatno zaštitili telefon lozinkom, PIN-om ili biometrijskim zaključavanjem.
+
+---
+
+## 10. Prestanak korišćenja
+
+- Možete prestati sa korišćenjem Aplikacije u bilo kom trenutku jednostavnim prestankom korišćenja ili deinstalacijom Aplikacije sa svog mobilnog uređaja.
+- Deinstaliranjem Aplikacije prestaju sve vaše obaveze i prava predviđena ovim Uslovima, izuzev odredbi koje po svojoj prirodi nadživljavaju prestanak (odricanje od garancija, ograničenje odgovornosti i licencna prava).
+
+---
+
+## 11. Izmene i dopune Uslova
+
+Zadržavamo pravo da povremeno izmenimo ove Uslove korišćenja u cilju usklađivanja sa novim funkcijama Aplikacije ili zakonskim regulativama.
+- Datum poslednje izmene biće jasno naznačen na vrhu ovog dokumenta.
+- Nastavak korišćenja Aplikacije nakon objavljivanja izmenjenih Uslova predstavlja vaše prihvatanje tih izmena.
+
+---
+
+## 12. Merodavno pravo i rešavanje sporova
+
+Na ove Uslove primenjuju se i tumače se u skladu sa važećim zakonima Republike Srbije, bez obzira na pravila o sukobu zakona. U slučaju bilo kakvog spora koji proistekne iz ovih Uslova, strane će nastojati da ga reše mirnim putem, a u suprotnom nadležan je stvarno nadležni sud.
+
+---
+
+## 13. Kontakt podaci
+
+Ukoliko imate pitanja, primedbe ili nedoumice u vezi sa ovim Uslovima korišćenja, možete nas kontaktirati na:
+- **E-pošta:** vengrinarpad@gmail.com
+- **Autor:** Arpad Vengrin
