@@ -1,0 +1,74 @@
+**Privacy Policy:** Txtura (com.txtura)
+
+**Date:** November 18, 2026
+
+---
+
+### 1. Introduction and Core Principles
+
+Txtura is built on the principle of **Privacy by Design**. The application serves as a default SMS and MMS client for the Android operating system.
+
+* **Local Data Processing:** All your data (messages, contacts, multimedia, and settings) is processed and stored exclusively on your device.
+* **No External Servers or Analytics:** Txtura does not collect, store on remote servers, analyze, sell, or share your data. The application contains no Google/Firebase analytics, advertising networks, or third-party tracking SDKs.
+
+---
+
+### 2. Data Processed by the Application and System Permissions
+
+#### A. Permissions Requested at First Launch (Core Functionality)
+
+1. **SMS and MMS (`READ_SMS`, `SEND_SMS`, `RECEIVE_SMS`, `RECEIVE_MMS`, `RECEIVE_WAP_PUSH`):**
+* **Purpose:** Reading, composing, sending, and receiving SMS/MMS messages.
+* **Processing:** Exclusively local via the Android system provider and local device database.
+
+2. **Contacts (`READ_CONTACTS`):**
+* **Purpose:** Displaying contact names, profile photos, and initials instead of phone numbers, as well as searching contacts when composing messages.
+* **Processing:** Exclusively read-only on the device itself. Contact data is never exported.
+
+3. **Notifications (`POST_NOTIFICATIONS` on Android 13+):**
+* **Purpose:** Displaying local system notifications for incoming messages and quick replies.
+
+4. **Default SMS App Role:**
+* **Purpose:** Required system status allowing the application to send and receive SMS/MMS messages.
+
+#### B. On-Demand Permissions (Requested Only When the User Triggers an Action)
+
+1. **Camera (`CAMERA`):**
+* **Purpose:** Capturing photos to send as MMS attachments.
+* **When:** Only when the user taps the camera icon in the message input bar.
+
+2. **Microphone (`RECORD_AUDIO`):**
+* **Purpose:** Recording voice messages as MMS audio attachments.
+* **When:** Only when the user presses and holds the microphone button.
+
+3. **Calendar (`READ_CALENDAR`):**
+* **Purpose:** Selecting and sharing event/schedule details in a message.
+* **When:** Only upon tapping "Calendar Event" in the attachments menu.
+
+#### C. Network Permissions (`INTERNET`, `ACCESS_NETWORK_STATE`, `CHANGE_NETWORK_STATE`)
+
+* **Purpose:** Exclusively for cellular data transmission with your mobile carrier's MMSC center to send and receive MMS content (APN data transfer) and for optional app update checks.
+
+---
+
+### 3. Third-Party Data Sharing
+
+* Txtura does not share data with third parties.
+* SMS and MMS transmission is handled directly through your mobile network operator in accordance with your carrier service agreement.
+* There are no embedded tools for advertising, telemetry, or user behavioral tracking.
+
+---
+
+### 4. Data Security and Protection
+
+* **Disallow Unprotected Backups:** By configuring `android:allowBackup="false"`, unauthorized extraction of SMS messages via insecure external tools is prevented.
+* **Cryptographic Backup Protection:** Manual message backups are secured using strong AES-GCM-256 encryption with PBKDF2 key derivation using a user-defined password.
+* **Sensitive Metadata Stripping:** The application automatically removes EXIF GPS location coordinates from photos before sending an MMS.
+* **Biometric Lock:** Supports app locking via fingerprint, face recognition, or the device's system PIN.
+
+---
+
+### 5. Data Deletion and Retention
+
+* **User Control:** Deleting a message or conversation immediately and permanently removes the data from the device.
+* **App Uninstallation:** Uninstalling the application deletes all associated cached data and the local database.
