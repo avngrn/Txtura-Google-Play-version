@@ -2,8 +2,8 @@
 
 [English](#english) | [Srpski](#srpski)
 
-**Last updated / Poslednje ažuriranje:** November 19, 2026 / 19. novembar 2026.  
-**Document Version / Verzija dokumenta:** 1.1  
+**Last updated / Poslednje ažuriranje:** November 23, 2026 / 23. novembar 2026.  
+**Document Version / Verzija dokumenta:** 1.2  
 **Application / Aplikacija:** Txtura (Package: `com.txtura`)  
 **Copyright Holder / Developer / Programer:** Arpad Vengrin  
 **Contact / Kontakt:** vengrinarpad@gmail.com
@@ -17,7 +17,7 @@
 
 This Privacy Policy explains in detail how the mobile application **Txtura** (hereinafter: "Application", "we", "us") accesses, uses, processes, and protects your data.
 
-Txtura is built around **Privacy by Design**. It operates as a Default SMS and MMS messaging application for Android. **All user data is processed and stored exclusively locally on your device.** The Application does not transmit, store on external servers, sell, rent, or share your personal data, messages, contacts, SIM metadata, or media with any third parties.
+Txtura is built around **Privacy by Design**. It operates as a Default SMS and MMS messaging application for Android. **By default, all user data is processed and stored exclusively locally on your device.** The Application operates no developer servers and does not transmit, sell, rent, or share your personal data, messages, contacts, SIM metadata, or media with any third parties. Optional cloud backup to your own private Google Drive (`appDataFolder`) is strictly opt-in and end-to-end encrypted on your device before upload.
 
 ---
 
@@ -66,11 +66,16 @@ To provide reliable SMS/MMS messaging and companion features, Txtura requests sp
 
 ---
 
-### 2.3. Home Screen Widgets, On-Device Link Safety & Network Permissions
+### 2.3. Home Screen Widgets, On-Device Link Safety, Optional Google Drive Backup & Network Permissions
 
-- **Home Screen Widgets (`Txtura Messages`, `Txtura Unread Messages`, `Txtura Contact`):** Display local conversation summaries, unread counts, and optional downsampled contact photos strictly on your device. Widget transparency and contrast automatically adapt to your wallpaper using Android's `WallpaperManager.getWallpaperColors(FLAG_SYSTEM)`, which requires **no storage permissions** and reads only coarse dominant color/luminance hints locally.
+- **Home Screen Widgets (`Txtura Messages`, `Txtura Unread Messages`, `Txtura Contact`, `Txtura Contacts Grid`):** Display local conversation summaries, unread counts, and optional downsampled contact photos strictly on your device (excluding locked Ghost Chat threads). Widget transparency and contrast automatically adapt to your wallpaper using Android's `WallpaperManager.getWallpaperColors(FLAG_SYSTEM)`, which requires **no storage permissions** and reads only coarse dominant color/luminance hints locally.
 - **On-Device Malicious Link Inspection & Optional Online Verification:** By default, links inside messages are checked **100% locally on your device** using heuristic rules (suspicious TLDs, phishing/typosquatting patterns, punycode, shorteners) with zero network requests. You may optionally enable *"Identify malicious websites in messages"* (disabled by default, requiring explicit consent in an in-app disclosure dialog) to verify extracted URLs/domains over HTTPS via Cloudflare Security DNS (`security.cloudflare-dns.com`) and redirect/TLS inspection; sender numbers, contacts, and full message text are never sent. Verified safe links become clickable hyperlinks that prompt you to either open in your default browser or copy to clipboard.
-- **Network Permissions (`INTERNET`, `ACCESS_NETWORK_STATE`, `CHANGE_NETWORK_STATE`):** Used for carrier MMS data transfer (MMSC APN) and, only if explicitly enabled by you, optional online URL safety verification. App updates are distributed solely through Google Play. Txtura contains **no analytics, no telemetry, and no ad SDKs**.
+- **Optional Google Drive Cloud Backup (`drive.appdata`):** You may optionally connect your own Google account inside *Settings → Data & Storage* to back up and restore your messages and app settings.
+  - **Restricted Scope:** Txtura requests only the non-sensitive `https://www.googleapis.com/auth/drive.appdata` scope, which grants access exclusively to a hidden, app-specific folder on your Google Drive. Txtura cannot view, read, modify, or delete any of your other Google Drive files.
+  - **End-to-End Encryption:** Every backup uploaded to Google Drive is encrypted client-side on your device using **AES-256-GCM** with salted **PBKDF2-HMAC-SHA256** (100,000 iterations) derived from a backup password you choose. Neither the developer nor Google can decrypt your backup without your password.
+  - **Optional Automatic Schedule:** If you enable Daily or Weekly automatic backups (with optional Wi-Fi-only and while-charging constraints via Android `WorkManager`), your chosen backup password is stored strictly locally on your device in `noBackupFilesDir`, encrypted by an **Android Keystore AES-256-GCM** hardware-backed key.
+  - **Google API Services User Data Policy (Limited Use):** Txtura's use and transfer of information received from Google APIs strictly adheres to the [Google API Services User Data Policy](https://developers.google.com/terms/api-services-user-data-policy), including the Limited Use requirements. Google Drive access is used solely to store, restore, or delete your own encrypted Txtura backup file upon your explicit request.
+- **Network Permissions (`INTERNET`, `ACCESS_NETWORK_STATE`, `CHANGE_NETWORK_STATE`):** Used for carrier MMS data transfer (MMSC APN) and, only if explicitly enabled by you, optional online URL safety verification and optional encrypted Google Drive backup/restore. App updates are distributed solely through Google Play. Txtura contains **no analytics, no telemetry, and no ad SDKs**.
 
 ---
 
@@ -87,17 +92,18 @@ Txtura **does NOT share, sell, or rent** your personal data to any third parties
 ## 4. Data Security & Protection
 
 1. **Encrypted Local Storage:** Local application data is protected with **SQLCipher (AES-256)** encryption.
-2. **Hardened Manifest (`allowBackup="false"`):** Prevents unencrypted ADB or cloud extraction of sensitive SMS/MMS messages.
-3. **Encrypted Local Backups:** User-initiated local backups are encrypted with **AES-256-GCM** using salted **PBKDF2** key derivation from your password/PIN.
+2. **Hardened Manifest (`allowBackup="false"`):** Prevents unencrypted ADB or system cloud extraction of sensitive SMS/MMS messages.
+3. **Encrypted Local & Google Drive Backups:** Both local backups and optional Google Drive (`appDataFolder`) backups are encrypted client-side with **AES-256-GCM** using salted **PBKDF2-HMAC-SHA256** (100,000 iterations) key derivation from your password. When scheduled automatic Google Drive backups are enabled, the backup password is protected locally with an Android Keystore AES-256-GCM key.
 4. **EXIF Metadata Minimization:** Photos sent via MMS automatically have sensitive EXIF metadata (such as GPS coordinates and camera model) stripped before transmission.
-5. **Sensitive Clipboard & Biometric Lock:** Copied OTP verification codes are flagged as sensitive (`EXTRA_IS_SENSITIVE` on Android 13+), and optional biometric/PIN lock plus screenshot blocking (`FLAG_SECURE`) protect physical access.
+5. **Sensitive Clipboard & Biometric Lock:** Copied OTP verification codes are flagged as sensitive (`EXTRA_IS_SENSITIVE` on Android 13+), and optional biometric/PIN lock, salted PBKDF2 Ghost Chat PIN hashing, plus screenshot blocking (`FLAG_SECURE`) protect physical access.
 
 ---
 
 ## 5. Data Retention & Deletion
 
-- **Full User Control:** Deleting any message or conversation permanently removes it from local app storage once emptied from Trash (with configurable auto-delete retention, default 30 days).
-- **Uninstallation:** Uninstalling Txtura erases all internal databases, widget bindings, preferences, and cached files from your device.
+- **Full User Control:** Deleting any message or conversation permanently removes it from local app storage once emptied from Trash (with configurable auto-delete retention, default 30 days, plus optional 24-hour OTP auto-cleanup).
+- **Google Drive Backup Deletion:** If you use optional Google Drive Cloud Backup, you can permanently delete your remote encrypted backup file or disconnect Google Drive at any time in *Settings → Data & Storage* (which also cancels scheduled backups and deletes the local Keystore-wrapped password).
+- **Uninstallation:** Uninstalling Txtura erases all internal databases, widget bindings, preferences, Keystore-wrapped secrets, and cached files from your device.
 
 ---
 
@@ -134,7 +140,7 @@ If you have any questions or concerns regarding this Privacy Policy:
 
 Ova Politika privatnosti detaljno opisuje kako mobilna aplikacija **Txtura** (u daljem tekstu: „Aplikacija“, „mi“, „nas“) pristupa, koristi, obrađuje i štiti korisničke podatke.
 
-Txtura je dizajnirana sa osnovnim principom privatnosti na prvom mestu (**Privacy by Design**). Aplikacija funkcioniše kao podrazumevana aplikacija za obradu tekstualnih (SMS) i multimedijalnih (MMS) poruka na Android operativnom sistemu. **Svi podaci korisnika obrađuju se i čuvaju isključivo lokalno na korisnikovom uređaju.** Aplikacija ne prenosi, ne skladišti na eksternim serverima, ne prodaje niti deli vaše lične podatke, poruke, kontakte, podatke o SIM karticama ili medije sa trećim stranama.
+Txtura je dizajnirana sa osnovnim principom privatnosti na prvom mestu (**Privacy by Design**). Aplikacija funkcioniše kao podrazumevana aplikacija za obradu tekstualnih (SMS) i multimedijalnih (MMS) poruka na Android operativnom sistemu. **Podrazumevano se svi podaci korisnika obrađuju i čuvaju isključivo lokalno na korisnikovom uređaju.** Aplikacija ne koristi servere programera i ne prenosi, ne prodaje niti deli vaše lične podatke, poruke, kontakte, podatke o SIM karticama ili medije sa trećim stranama. Opciona rezervna kopija na vašem sopstvenom Google Drive nalogu (`appDataFolder`) je isključivo po izboru korisnika i end-to-end šifrovana na uređaju pre slanja.
 
 ---
 
@@ -183,11 +189,16 @@ Da bi pružila pouzdanu funkcionalnost slanja i prijema poruka i pratećih opcij
 
 ---
 
-### 2.3. Vidžeti na početnom ekranu, lokalna provera linkova i mrežne dozvole
+### 2.3. Vidžeti na početnom ekranu, lokalna provera linkova, opcioni Google Drive bekap i mrežne dozvole
 
-- **Vidžeti na početnom ekranu (*Txtura poruke*, *Txtura nepročitane poruke*, *Txtura kontakt*):** Prikazuju sažetke razgovora, broj nepročitanih poruka i (ako postoji) umanjenu fotografiju izabranog kontakta isključivo lokalno na uređaju. Transparentnost i kontrast vidžeta automatski se prilagođavaju pozadini početnog ekrana pomoću sistemskog API-ja `WallpaperManager.getWallpaperColors(FLAG_SYSTEM)` **bez potrebe za dozvolom pristupa skladištu**.
+- **Vidžeti na početnom ekranu (*Txtura poruke*, *Txtura nepročitane poruke*, *Txtura kontakt*, *Txtura mreža kontakata*):** Prikazuju sažetke razgovora, broj nepročitanih poruka i (ako postoji) umanjenu fotografiju izabranih kontakata isključivo lokalno na uređaju (automatski isključujući zaključane Skrivene razgovore). Transparentnost i kontrast vidžeta automatski se prilagođavaju pozadini početnog ekrana pomoću sistemskog API-ja `WallpaperManager.getWallpaperColors(FLAG_SYSTEM)` **bez potrebe za dozvolom pristupa skladištu**.
 - **Lokalna provera bezbednosti linkova i opciona online provera:** Podrazumevano se svi linkovi u porukama proveravaju **100% lokalno na uređaju** (heuristika, sumnjivi domeni, fišing obrasci, punycode, skraćivači linkova) bez mrežnih zahteva. Opciono možete uključiti *„Identifikacija zlonamernih veb-sajtova u porukama“* (podrazumevano isključeno, uz obaveznu saglasnost u dijalogu u aplikaciji) radi provere izdvojenih URL-ova/domena putem HTTPS-a preko Cloudflare Security DNS-a (`security.cloudflare-dns.com`) i provere preusmerenja/TLS sertifikata; brojevi pošiljalaca, kontakti i ostatak teksta poruke nikada se ne šalju. Bezbedni linkovi se prikazuju kao klikabilni hiperlinkovi koji na dodir nude izbor: otvaranje u podrazumevanom pregledaču ili kopiranje.
-- **Mrežne dozvole (`INTERNET`, `ACCESS_NETWORK_STATE`, `CHANGE_NETWORK_STATE`):** Koriste se za mobilni prenos podataka prilikom slanja/prijema MMS poruka preko MMSC centra vašeg operatera (APN) i, isključivo ako korisnik to izričito uključi, za opcionu online proveru bezbednosti linkova. Ažuriranja aplikacije se isporučuju isključivo putem Google Play prodavnice. Aplikacija **ne sadrži analitiku, telemetriju niti reklamne SDK-ove**.
+- **Opciona Google Drive rezervna kopija (`drive.appdata`):** Opciono možete povezati svoj Google nalog u *Podešavanja → Podaci i skladište* radi čuvanja i vraćanja poruka i podešavanja.
+  - **Ograničeni pristup:** Txtura traži isključivo neosetljivi opseg `https://www.googleapis.com/auth/drive.appdata`, koji daje pristup samo skrivenoj fascikli rezervisanoj za aplikaciju. Txtura ne može da vidi, čita, menja niti briše bilo koje druge fajlove na vašem Google Drive-u.
+  - **End-to-end enkripcija:** Svaka kopija pre slanja na Google Drive šifruje se lokalno na vašem uređaju pomoću **AES-256-GCM** enkripcije sa **PBKDF2-HMAC-SHA256** (100.000 iteracija) izvođenjem ključa iz lozinke koju sami odaberete. Ni programer ni Google ne mogu dešifrovati sadržaj kopije bez vaše lozinke.
+  - **Opcioni automatski raspored:** Ako uključite dnevno ili nedeljno automatsko čuvanje (sa opcijama samo preko Wi-Fi mreže i samo dok se telefon puni preko Android `WorkManager`-a), vaša lozinka bekapa čuva se isključivo lokalno u `noBackupFilesDir`, šifrovana **Android Keystore AES-256-GCM** ključem.
+  - **Google API Services User Data Policy (Limited Use):** Korišćenje informacija dobijenih putem Google API-ja u aplikaciji Txtura u potpunosti je usklađeno sa [Google API Services User Data Policy](https://developers.google.com/terms/api-services-user-data-policy), uključujući zahteve ograničene upotrebe (Limited Use). Pristup Google Drive-u koristi se isključivo za čuvanje, vraćanje ili brisanje vaše šifrovane Txtura kopije na vaš zahtev.
+- **Mrežne dozvole (`INTERNET`, `ACCESS_NETWORK_STATE`, `CHANGE_NETWORK_STATE`):** Koriste se za mobilni prenos podataka prilikom slanja/prijema MMS poruka preko MMSC centra vašeg operatera (APN) i, isključivo ako korisnik to izričito uključi, za opcionu online proveru bezbednosti linkova i opcioni šifrovani Google Drive bekap i vraćanje. Ažuriranja aplikacije se isporučuju isključivo putem Google Play prodavnice. Aplikacija **ne sadrži analitiku, telemetriju niti reklamne SDK-ove**.
 
 ---
 
@@ -204,17 +215,18 @@ Txtura **NE deli, NE prodaje i NE iznajmljuje** vaše lične podatke bilo kojim 
 ## 4. Zaštita i bezbednost podataka
 
 1. **Šifrovana lokalna baza podataka:** Osetljivi lokalni podaci zaštićeni su pomoću **SQLCipher (AES-256)** enkripcije.
-2. **Hardened manifest (`allowBackup="false"`):** Sprečava neovlašćeno izvlačenje SMS/MMS poruka preko ADB-a ili neenkriptovanih rezervnih kopija u oblaku.
-3. **Kriptografska zaštita rezervnih kopija:** Lokalne rezervne kopije koje korisnik kreira zaštićene su **AES-256-GCM** enkripcijom sa **PBKDF2** izvođenjem ključa iz lozinke/PIN-a.
+2. **Hardened manifest (`allowBackup="false"`):** Sprečava neovlašćeno izvlačenje SMS/MMS poruka preko ADB-a ili neenkriptovanih sistemskih rezervnih kopija.
+3. **Kriptografska zaštita lokalnih i Google Drive rezervnih kopija:** I lokalne i opcione Google Drive (`appDataFolder`) rezervne kopije šifrovane su na samom uređaju pomoću **AES-256-GCM** enkripcije sa **PBKDF2-HMAC-SHA256** (100.000 iteracija) izvođenjem ključa iz vaše lozinke. Kada je uključen automatski Google Drive bekap, lozinka kopije se lokalno štiti Android Keystore AES-256-GCM ključem.
 4. **Uklanjanje metapodataka (EXIF):** Prilikom slanja MMS fotografija automatski se uklanjaju osetljivi EXIF podaci (GPS koordinate, model kamere).
-5. **Zaštita kopiranih kodova i biometrijsko zaključavanje:** Kopirani verifikacioni kodovi označavaju se kao osetljivi sadržaj (`EXTRA_IS_SENSITIVE` na Android 13+), a aplikacija podržava biometrijsko zaključavanje i zaštitu od skrinšotovanja (`FLAG_SECURE`).
+5. **Zaštita kopiranih kodova i biometrijsko zaključavanje:** Kopirani verifikacioni kodovi označavaju se kao osetljivi sadržaj (`EXTRA_IS_SENSITIVE` na Android 13+), a aplikacija podržava biometrijsko zaključavanje, PBKDF2 heširanje PIN-a za Skrivene razgovore i zaštitu od skrinšotovanja (`FLAG_SECURE`).
 
 ---
 
 ## 5. Zadržavanje i brisanje podataka
 
-- **Potpuna kontrola korisnika:** Brisanjem poruke ili razgovora podaci se trajno uklanjaju iz lokalne baze nakon isteka perioda zadržavanja u korpi (podrazumevano 30 dana) ili odmah pražnjenjem korpe.
-- **Deinstalacija:** Deinstaliranjem aplikacije sa uređaja brišu se sve interne baze, podešavanja vidžeta, konfiguracioni fajlovi i keš.
+- **Potpuna kontrola korisnika:** Brisanjem poruke ili razgovora podaci se trajno uklanjaju iz lokalne baze nakon isteka perioda zadržavanja u korpi (podrazumevano 30 dana, uz opciono automatsko brisanje OTP kodova posle 24 sata) ili odmah pražnjenjem korpe.
+- **Brisanje Google Drive kopije:** Ako koristite opcionu Google Drive rezervnu kopiju, u svakom trenutku možete trajno obrisati šifrovani fajl sa Google Drive-a ili prekinuti vezu u *Podešavanja → Podaci i skladište* (čime se otkazuju i zakazani bekapi i briše lokalno šifrovana lozinka).
+- **Deinstalacija:** Deinstaliranjem aplikacije sa uređaja brišu se sve interne baze, podešavanja vidžeta, konfiguracioni fajlovi, Keystore tajne i keš.
 
 ---
 
