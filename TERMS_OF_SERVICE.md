@@ -2,8 +2,8 @@
 
 [English](#english) | [Srpski](#srpski)
 
-**Last updated / Poslednje ažuriranje:** November 19, 2026 / 19. novembar 2026.  
-**Document Version / Verzija dokumenta:** 1.1  
+**Last updated / Poslednje ažuriranje:** November 24, 2026 / 24. novembar 2026.  
+**Document Version / Verzija dokumenta:** 1.2  
 **Application / Aplikacija:** Txtura (Package: `com.txtura`)  
 **Copyright Holder / Developer / Programer:** Arpad Vengrin  
 **Contact / Kontakt:** vengrinarpad@gmail.com
@@ -23,18 +23,18 @@ If you do not agree with any provision of these Terms, do not install or use thi
 
 ## 2. Nature of the Application and How It Works
 
-Txtura is an open-source Android client application for receiving, reading, organizing, and sending SMS and MMS messages, including Dual SIM routing, on-device security checks, and home screen widgets.
+Txtura is an open-source Android client application for receiving, reading, organizing, and sending SMS and MMS messages, including Dual SIM routing, on-device security checks, optional local Wi-Fi Phone ↔ Tablet companion pairing, optional encrypted Google Drive backup, and home screen widgets.
 
 - **Local On-Device Client:** Txtura runs strictly locally on your mobile device.
-- **No Proprietary Messaging Server:** Txtura does not own or operate a telecommunications network. Message transmission, billing, SIM routing, and delivery of SMS/MMS content are performed entirely by your mobile carrier(s).
+- **No Proprietary Messaging Server:** Txtura does not own or operate a telecommunications network or cloud messaging relay. Message transmission, billing, SIM routing, and delivery of SMS/MMS content are performed entirely by your mobile carrier(s), including when messages are relayed from a paired companion tablet over your local Wi-Fi network through your phone.
 
 ---
 
-## 3. Mobile Carrier Fees & Dual SIM Usage
+## 3. Mobile Carrier Fees, Dual SIM & Paired Tablet Usage
 
 Using the Application to send and receive SMS and MMS messages is subject to your mobile carrier's tariff plan(s):
 
-- **Carrier Messaging & Data Charges:** Sending SMS/MMS messages (including from either `SIM 1` or `SIM 2` on Dual SIM devices) and cellular data used for MMS retrieval may incur charges under your mobile carrier contract(s), including roaming charges.
+- **Carrier Messaging & Data Charges:** Sending SMS/MMS messages (including from either `SIM 1` or `SIM 2` on Dual SIM devices, or relayed via a locally paired tablet through your phone) and cellular data used for MMS retrieval may incur charges under your mobile carrier contract(s), including roaming charges.
 - **Free Software:** Txtura does not charge per-message fees, subscriptions, or hidden costs. All telecom fees are billed exclusively by your mobile carrier(s).
 
 ---
@@ -65,9 +65,12 @@ Although Txtura supports Wireless Emergency Alerts and standard SMS messaging:
 
 ---
 
-## 7. Privacy & Home Screen Widgets
+## 7. Privacy, Widgets, Local Pairing & Encrypted Backups
 
-Your privacy comes first. All conversations, contacts, widget bindings, and attachments remain strictly on your device and are never transmitted to the author or third parties. Please note that placing a home screen widget (*Txtura Messages*, *Txtura Unread Messages*, or *Txtura Contact*) may display message previews or contact names on your home screen depending on your device's lock-screen and launcher settings.
+Your privacy comes first. All conversations, contacts, widget bindings, and attachments remain strictly on your device (or strictly between your locally paired phone and tablet on your private Wi-Fi network) and are never transmitted to the author or third parties. Please note:
+- Placing a home screen widget (*Txtura Messages*, *Txtura Unread Messages*, *Txtura Contact*, or *Txtura Contacts Grid*) may display message previews or contact names on your home screen depending on your device's lock-screen and launcher settings.
+- If you enable optional **Local Wi-Fi Phone ↔ Tablet Pairing**, you are responsible for keeping your pairing QR code private and securing both paired devices.
+- If you enable optional **Encrypted Local or Google Drive Backup**, you are solely responsible for remembering your chosen backup password; because backups are end-to-end encrypted on your device, neither the author nor Google can recover a lost password.
 
 Full details are provided in our [Privacy Policy](PRIVACY_POLICY.md), which forms an integral part of these Terms.
 
@@ -134,18 +137,18 @@ Ukoliko se ne slažete sa bilo kojom odredbom ovih Uslova, nemojte instalirati n
 
 ## 2. Priroda aplikacije i način funkcionisanja
 
-Txtura je aplikacija otvorenog koda (open-source) namenjena operativnom sistemu Android, koja funkcioniše kao klijent za prijem, čitanje, upravljanje i slanje SMS i MMS poruka, uključujući Dual SIM podršku, lokalne bezbednosne provere i vidžete za početni ekran.
+Txtura je aplikacija otvorenog koda namenjena operativnom sistemu Android, koja funkcioniše kao klijent za prijem, čitanje, upravljanje i slanje SMS i MMS poruka, uključujući podršku za dve SIM kartice, lokalne bezbednosne provere, opciono lokalno Wi-Fi povezivanje telefona i tableta, opcionu šifrovanu Google Drive rezervnu kopiju i vidžete za početni ekran.
 
 - **Klijentski softver na uređaju:** Txtura je samostalna aplikacija koja radi isključivo lokalno na vašem mobilnom uređaju.
-- **Nema sopstveni server niti servis za razmenu poruka:** Txtura ne poseduje niti upravlja sopstvenom telekomunikacionom mrežom. Prenos poruka, naplata, SIM usmeravanje i isporuka SMS/MMS sadržaja u celosti se vrše putem vašeg mobilnog telekomunikacionog operatera.
+- **Nema sopstveni server niti servis za razmenu poruka:** Txtura ne poseduje niti upravlja sopstvenom telekomunikacionom mrežom niti serverom u oblaku. Prenos poruka, naplata, usmeravanje putem SIM kartice i isporuka SMS i MMS sadržaja u celosti se vrše putem vašeg mobilnog operatera, uključujući i poruke poslate sa povezanog tableta preko lokalne Wi-Fi mreže i vašeg telefona.
 
 ---
 
-## 3. Tarife, naknade operatera i Dual SIM korišćenje
+## 3. Tarife, naknade operatera, dve SIM kartice i upareni tablet
 
 Korišćenje Aplikacije za slanje i prijem SMS i MMS poruka podleže tarifnom paketu vašeg mobilnog operatera:
 
-- **Troškovi poruka i prenosa podataka:** Slanje SMS i MMS poruka (bilo sa `SIM 1` ili `SIM 2` kartice), kao i prenos podataka neophodan za preuzimanje MMS sadržaja, mogu prouzrokovati troškove u skladu sa ugovorom koji imate sa vašim mobilnim operaterima (uključujući roming tarife).
+- **Troškovi poruka i prenosa podataka:** Slanje SMS i MMS poruka (sa `SIM 1` ili `SIM 2` kartice, kao i sa lokalno uparenog tableta preko vašeg telefona), kao i prenos podataka neophodan za preuzimanje MMS sadržaja, mogu prouzrokovati troškove u skladu sa ugovorom koji imate sa vašim mobilnim operaterima (uključujući roming tarife).
 - **Aplikacija je besplatna:** Txtura ne naplaćuje slanje poruka, pretplatu, niti ima skrivene troškove. Sve telekomunikacione naknade naplaćuje isključivo vaš mobilni operater.
 
 ---
@@ -176,11 +179,14 @@ Iako Txtura podržava prijem hitnih sistemskih upozorenja (Wireless Emergency Al
 
 ---
 
-## 7. Privatnost i vidžeti na početnom ekranu
+## 7. Privatnost, vidžeti, lokalno povezivanje i šifrovane rezervne kopije
 
-Vaša privatnost nam je na prvom mestu. Svi razgovori, poruke, kontakti, podešavanja vidžeta i prilozi ostaju isključivo na vašem uređaju i ne prenose se autoru Aplikacije niti trećim licima. Imajte u vidu da postavljanje vidžeta (*Txtura poruke*, *Txtura nepročitane poruke*, *Txtura kontakt*) može prikazivati delove poruka ili imena kontakata na početnom ekranu u skladu sa podešavanjima vašeg telefona.
+Vaša privatnost nam je na prvom mestu. Svi razgovori, poruke, kontakti, podešavanja vidžeta i prilozi ostaju isključivo na vašem uređaju (ili isključivo između vašeg lokalno uparenog telefona i tableta na privatnoj Wi-Fi mreži) i ne prenose se autoru Aplikacije niti trećim licima. Imajte u vidu sledeće:
+- Postavljanje vidžeta (*Txtura poruke*, *Txtura nepročitane poruke*, *Txtura kontakt* ili *Txtura mreža kontakata*) može prikazivati delove poruka ili imena kontakata na početnom ekranu u skladu sa podešavanjima vašeg telefona.
+- Ako uključite opciono **Lokalno Wi-Fi povezivanje telefona i tableta**, odgovorni ste za čuvanje QR koda za uparivanje i bezbednost oba povezana uređaja.
+- Ako uključite opcionu **Šifrovanu lokalnu ili Google Drive rezervnu kopiju**, sami ste odgovorni za čuvanje izabrane lozinke kopije — pošto se kopija šifruje na samom uređaju, ni autor ni Google ne mogu povratiti izgubljenu lozinku.
 
-Detaljne informacije možete pročitati u dokumentu [Politika privatnosti (Privacy Policy)](PRIVACY_POLICY.md), koji čini sastavni deo ovih Uslova.
+Detaljne informacije možete pročitati u dokumentu [Politika privatnosti](PRIVACY_POLICY.md), koji čini sastavni deo ovih Uslova.
 
 ---
 
