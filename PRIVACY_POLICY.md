@@ -2,8 +2,8 @@
 
 [English](#english) | [Srpski](#srpski)
 
-**Last updated / Poslednje ažuriranje:** November 24, 2026 / 24. novembar 2026.  
-**Document Version / Verzija dokumenta:** 1.3  
+**Last updated / Poslednje ažuriranje:** November 25, 2026 / 25. novembar 2026.  
+**Document Version / Verzija dokumenta:** 1.4  
 **Application / Aplikacija:** Txtura (Package: `com.txtura`)  
 **Copyright Holder / Developer / Programer:** Arpad Vengrin  
 **Contact / Kontakt:** vengrinarpad@gmail.com
@@ -28,7 +28,7 @@ To provide reliable SMS/MMS messaging and companion features, Txtura requests sp
 ### 2.1. Permissions Requested on First Launch
 
 1. **SMS and MMS Messages (`READ_SMS`, `SEND_SMS`, `RECEIVE_SMS`, `RECEIVE_MMS`, `RECEIVE_WAP_PUSH`):**
-   - **Purpose:** Core functionality of a Default SMS/MMS handler—reading existing message history, receiving incoming messages in real time, composing and sending SMS/MMS messages, performing 100% on-device verification code (OTP) recognition and malicious link checks, and updating home screen widgets.
+   - **Purpose:** Core functionality of a Default SMS/MMS handler—reading existing message history, receiving incoming messages in real time, composing and sending SMS/MMS messages (including optional carrier MMS read reports when enabled), performing 100% on-device verification code (OTP) recognition and malicious link checks, and updating home screen widgets.
    - **Processing:** Performed 100% locally on your device via Android's official Telephony provider and an encrypted local database. Messages are never uploaded to external servers.
 
 2. **Contacts (`READ_CONTACTS`):**
@@ -68,7 +68,7 @@ To provide reliable SMS/MMS messaging and companion features, Txtura requests sp
 
 ### 2.3. Home Screen Widgets, On-Device Link Safety, Optional Local Wi-Fi Pairing, Optional Google Drive Backup & Network Permissions
 
-- **Home Screen Widgets (`Txtura Messages`, `Txtura Unread Messages`, `Txtura Contact`, `Txtura Contacts Grid`):** Display local conversation summaries, unread counts, and optional downsampled contact photos strictly on your device (excluding locked Hidden Chats threads). Widget transparency and contrast automatically adapt to your wallpaper using Android's `WallpaperManager.getWallpaperColors(FLAG_SYSTEM)`, which requires **no storage permissions** and reads only coarse dominant color/luminance hints locally.
+- **Home Screen Widgets (`Txtura Messages`, `Txtura Unread Messages`, `Txtura Contact`, `Txtura Contacts Grid`) & Selectable App Icons:** Widgets display local conversation summaries, unread counts, and optional downsampled contact photos strictly on your device (excluding locked Hidden Chats threads), adapting transparency via `WallpaperManager.getWallpaperColors(FLAG_SYSTEM)` with **no storage permissions**. Switching between Txtura's 12 selectable home screen app icons updates only local Android launcher component preferences (`<activity-alias>`) when you leave the app, with zero extra permissions and zero off-device communication.
 - **On-Device Malicious Link Inspection & Optional Online Verification:** By default, links inside messages are checked **100% locally on your device** using heuristic rules (suspicious TLDs, phishing/typosquatting patterns, punycode, shorteners) with zero network requests. You may optionally enable *"Identify malicious websites in messages"* (disabled by default, requiring explicit consent in an in-app disclosure dialog) to verify extracted URLs/domains over HTTPS via Cloudflare Security DNS (`security.cloudflare-dns.com`) and redirect/TLS inspection; sender numbers, contacts, and full message text are never sent. Verified safe links become clickable hyperlinks that prompt you to either open in your default browser or copy to clipboard.
 - **Optional Local Wi-Fi Companion Pairing (Phone ↔ Tablet):** You may optionally pair a SIM-less tablet with your phone over your local Wi-Fi network or mobile hotspot to sync conversations and send SMS, MMS, and voice messages through your phone.
   - **Zero Cloud Servers:** All communication stays strictly within your private local network (enforced by private LAN IP validation) using Android Network Service Discovery (`_txtura._tcp.`), `ACCESS_WIFI_STATE`, and a visible foreground service (`FOREGROUND_SERVICE_REMOTE_MESSAGING`) while active.
@@ -155,7 +155,7 @@ Da bi pružila pouzdanu funkcionalnost slanja i prijema poruka i pratećih opcij
 ### 2.1. Dozvole koje se traže pri prvom pokretanju aplikacije
 
 1. **SMS i MMS poruke (`READ_SMS`, `SEND_SMS`, `RECEIVE_SMS`, `RECEIVE_MMS`, `RECEIVE_WAP_PUSH`):**
-   - **Svrha:** Osnovna funkcionalnost aplikacije kao podrazumevanog SMS/MMS klijenta – čitanje postojećih razgovora, prijem dolaznih poruka u realnom vremenu, sastavljanje i slanje poruka, 100% lokalno prepoznavanje verifikacionih kodova (OTP), lokalna provera bezbednosti linkova i prikaz u vidžetima.
+   - **Svrha:** Osnovna funkcionalnost aplikacije kao podrazumevanog SMS/MMS klijenta – čitanje postojećih razgovora, prijem dolaznih poruka u realnom vremenu, sastavljanje i slanje poruka (uključujući opcione potvrde čitanja za MMS kada su uključene), 100% lokalno prepoznavanje jednokratnih sigurnosnih kodova, lokalna provera bezbednosti internet adresa i prikaz u vidžetima.
    - **Način obrade:** Obrada se vrši 100% lokalno na vašem uređaju preko zvaničnog Android Telephony provajdera i šifrovane lokalne baze. Podaci se nikada ne šalju na spoljne servere.
 
 2. **Kontakti (`READ_CONTACTS`):**
@@ -195,7 +195,7 @@ Da bi pružila pouzdanu funkcionalnost slanja i prijema poruka i pratećih opcij
 
 ### 2.3. Vidžeti na početnom ekranu, lokalna provera linkova, opciono lokalno Wi-Fi povezivanje, opciona Google Drive kopija i mrežne dozvole
 
-- **Vidžeti na početnom ekranu (*Txtura poruke*, *Txtura nepročitane poruke*, *Txtura kontakt*, *Txtura mreža kontakata*):** Prikazuju sažetke razgovora, broj nepročitanih poruka i (ako postoji) umanjenu fotografiju izabranih kontakata isključivo lokalno na uređaju (automatski isključujući zaključane Sakrivene razgovore). Providnost i kontrast vidžeta automatski se prilagođavaju pozadini početnog ekrana pomoću sistemske funkcije `WallpaperManager.getWallpaperColors(FLAG_SYSTEM)` **bez potrebe za dozvolom pristupa skladištu**.
+- **Vidžeti na početnom ekranu (*Txtura poruke*, *Txtura nepročitane poruke*, *Txtura kontakt*, *Txtura mreža kontakata*) i izborne ikonice aplikacije:** Vidžeti prikazuju sažetke razgovora, broj nepročitanih poruka i umanjene fotografije kontakata isključivo lokalno na uređaju (automatski isključujući zaključane Sakrivene razgovore), a providnost i kontrast automatski prilagođavaju pozadini početnog ekrana pomoću sistemske funkcije `WallpaperManager.getWallpaperColors(FLAG_SYSTEM)` **bez potrebe za dozvolom pristupa skladištu**. Izbor jedne od 12 ikonica aplikacije menja isključivo lokalnu sistemsku postavku ikonice na početnom ekranu pri izlasku iz aplikacije, bez dodatnih dozvola i bez ikakvog slanja podataka.
 - **Lokalna provera bezbednosti linkova i opciona internet provera:** Podrazumevano se svi linkovi u porukama proveravaju **100% lokalno na uređaju** (sumnjivi domeni, obrasci prevara, skraćeni linkovi) bez mrežnih zahteva. Opciono možete uključiti *„Identifikacija zlonamernih veb-sajtova u porukama“* (podrazumevano isključeno, uz obaveznu saglasnost u dijalogu u aplikaciji) radi provere izdvojenih internet adresa putem šifrovane HTTPS veze preko Cloudflare Security DNS-a (`security.cloudflare-dns.com`) i provere preusmerenja; brojevi pošiljalaca, kontakti i ostatak teksta poruke nikada se ne šalju. Bezbedni linkovi nude otvaranje u pregledaču ili kopiranje.
 - **Opciono lokalno Wi-Fi povezivanje telefona i tableta:** Opciono možete povezati tablet bez SIM kartice sa svojim telefonom preko iste lokalne Wi-Fi mreže ili pristupne tačke radi sinhronizacije razgovora i slanja SMS, MMS i glasovnih poruka preko telefona.
   - **Bez spoljnih servera:** Celokupna razmena ostaje isključivo u vašoj privatnoj lokalnoj mreži (uz proveru privatnih lokalnih adresa), koristeći lokalno pronalaženje uređaja (`_txtura._tcp.`), dozvolu `ACCESS_WIFI_STATE` i vidljivo trajno obaveštenje aktivne usluge (`FOREGROUND_SERVICE_REMOTE_MESSAGING`) dok su uređaji povezani.
