@@ -2,8 +2,8 @@
 
 [English](#english) | [Srpski](#srpski)
 
-**Last updated / Poslednje ažuriranje:** November 24, 2026 / 24. novembar 2026.  
-**Document Version / Verzija dokumenta:** 1.2  
+**Last updated / Poslednje ažuriranje:** November 25, 2026 / 25. novembar 2026.  
+**Document Version / Verzija dokumenta:** 1.3  
 **Application / Aplikacija:** Txtura (Package: `com.txtura`)  
 **Copyright Holder / Developer / Programer:** Arpad Vengrin  
 **Contact / Kontakt:** vengrinarpad@gmail.com
@@ -23,7 +23,7 @@ If you do not agree with any provision of these Terms, do not install or use thi
 
 ## 2. Nature of the Application and How It Works
 
-Txtura is an open-source Android client application for receiving, reading, organizing, and sending SMS and MMS messages, including Dual SIM routing, on-device security checks, optional local Wi-Fi Phone ↔ Tablet companion pairing, optional encrypted Google Drive backup, and home screen widgets.
+Txtura is an open-source Android client application for receiving, reading, organizing, and sending SMS and MMS messages (including MMS read reports when enabled), Dual SIM routing, on-device security checks, customizable themes and app icons, optional local Wi-Fi Phone ↔ Tablet companion pairing, optional encrypted Google Drive backup, and home screen widgets.
 
 - **Local On-Device Client:** Txtura runs strictly locally on your mobile device.
 - **No Proprietary Messaging Server:** Txtura does not own or operate a telecommunications network or cloud messaging relay. Message transmission, billing, SIM routing, and delivery of SMS/MMS content are performed entirely by your mobile carrier(s), including when messages are relayed from a paired companion tablet over your local Wi-Fi network through your phone.
@@ -80,7 +80,7 @@ Full details are provided in our [Privacy Policy](PRIVACY_POLICY.md), which form
 
 - **License:** Txtura is open-source software released under the **GNU General Public License version 3 (GPLv3)**.
 - **Your Rights:** You may inspect, modify, and redistribute the source code in compliance with GPLv3 (any redistributed or modified version must remain licensed under GPLv3 and preserve copyright notices).
-- **Branding:** The "Txtura" name, logo, and distinctive visual assets remain the property of the author and may not be used commercially without prior permission.
+- **Branding:** The "Txtura" name, logo, selectable app icons, and distinctive visual assets remain the property of the author and may not be used commercially without prior permission.
 
 ---
 
@@ -137,7 +137,7 @@ Ukoliko se ne slažete sa bilo kojom odredbom ovih Uslova, nemojte instalirati n
 
 ## 2. Priroda aplikacije i način funkcionisanja
 
-Txtura je aplikacija otvorenog koda namenjena operativnom sistemu Android, koja funkcioniše kao klijent za prijem, čitanje, upravljanje i slanje SMS i MMS poruka, uključujući podršku za dve SIM kartice, lokalne bezbednosne provere, opciono lokalno Wi-Fi povezivanje telefona i tableta, opcionu šifrovanu Google Drive rezervnu kopiju i vidžete za početni ekran.
+Txtura je aplikacija otvorenog koda namenjena operativnom sistemu Android, koja funkcioniše kao klijent za prijem, čitanje, upravljanje i slanje SMS i MMS poruka (uključujući opcione potvrde čitanja za MMS), podršku za dve SIM kartice, lokalne bezbednosne provere, prilagodljive teme i ikonice aplikacije, opciono lokalno Wi-Fi povezivanje telefona i tableta, opcionu šifrovanu Google Drive rezervnu kopiju i vidžete za početni ekran.
 
 - **Klijentski softver na uređaju:** Txtura je samostalna aplikacija koja radi isključivo lokalno na vašem mobilnom uređaju.
 - **Nema sopstveni server niti servis za razmenu poruka:** Txtura ne poseduje niti upravlja sopstvenom telekomunikacionom mrežom niti serverom u oblaku. Prenos poruka, naplata, usmeravanje putem SIM kartice i isporuka SMS i MMS sadržaja u celosti se vrše putem vašeg mobilnog operatera, uključujući i poruke poslate sa povezanog tableta preko lokalne Wi-Fi mreže i vašeg telefona.
@@ -194,7 +194,7 @@ Detaljne informacije možete pročitati u dokumentu [Politika privatnosti](PRIVA
 
 - **Licenca:** Txtura je softver otvorenog koda objavljen pod uslovima licence **GNU General Public License verzija 3 (GPLv3)**.
 - **Vaša prava:** Imate pravo da pregledate, menjate i distribuirate izvorni kod Aplikacije u skladu sa odredbama GPLv3 licence (svaka redistribuirana ili izmenjena verzija mora ostati pod GPLv3 licencom i sačuvati autorska prava).
-- **Žig i vizuelni identitet:** Naziv „Txtura“, logo i prateći unikatni vizuelni elementi vlasništvo su autora i ne mogu se koristiti u komercijalne svrhe bez prethodne saglasnosti.
+- **Žig i vizuelni identitet:** Naziv „Txtura“, logo, izborne ikonice aplikacije i prateći unikatni vizuelni elementi vlasništvo su autora i ne mogu se koristiti u komercijalne svrhe bez prethodne saglasnosti.
 
 ---
 
