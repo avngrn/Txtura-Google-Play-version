@@ -2,8 +2,8 @@
 
 [English](#english) | [Srpski](#srpski)
 
-**Last updated / Poslednje ažuriranje:** November 25, 2026 / 25. novembar 2026.  
-**Document Version / Verzija dokumenta:** 1.3  
+**Last updated / Poslednje ažuriranje:** November 28, 2026 / 28. novembar 2026.  
+**Document Version / Verzija dokumenta:** 1.4  
 **Application / Aplikacija:** Txtura (Package: `com.txtura`)  
 **Copyright Holder / Developer / Programer:** Arpad Vengrin  
 **Contact / Kontakt:** vengrinarpad@gmail.com
@@ -57,11 +57,11 @@ Txtura includes built-in 100% on-device heuristic checks for suspicious links an
 
 ---
 
-## 6. Emergency Services
+## 6. Emergency Services & Public Safety Alerts
 
-Although Txtura supports Wireless Emergency Alerts and standard SMS messaging:
-- Delivering SMS messages to emergency numbers (e.g., 112, 911, or local police/ambulance numbers) depends exclusively on carrier support and coverage.
-- **Recommendation:** In life-threatening or emergency situations, **always place a direct voice call to emergency services** rather than relying on text messages.
+Txtura supports Wireless Emergency Alerts (WEA) and local escalation for official public safety bulletins, including the Serbian "Pronađi me" / AMBER Alert system:
+- **Serbian "Pronađi me" System:** When an official SMS broadcast is received regarding an abducted child (`pronadjime.mup.gov.rs`), Txtura escalates the notification with a dedicated emergency siren tone and prominent lock-screen alert.
+- **Dialing Emergency Services:** Delivering outbound SMS messages to emergency numbers (e.g., 112, 911, or local police/ambulance numbers) depends strictly on carrier support and network coverage. In life-threatening situations, **always make an immediate direct voice call to emergency services** rather than sending a text message.
 
 ---
 
@@ -171,11 +171,11 @@ Txtura sadrži ugrađenu 100% lokalnu heurističku proveru sumnjivih linkova i s
 
 ---
 
-## 6. Hitne službe i hitni pozivi/poruke (Emergency Services)
+## 6. Hitne službe i obaveštenja od javnog značaja
 
-Iako Txtura podržava prijem hitnih sistemskih upozorenja (Wireless Emergency Alerts) i omogućava slanje SMS poruka:
-- Slanje SMS poruka hitnim službama (npr. 112, 911 ili lokalnim brojevima policije/hitne pomoći) zavisi isključivo od tehničke podrške i pokrivenosti vašeg mobilnog operatera i lokalnih vlasti.
-- **Preporuka:** U situacijama opasnim po život ili hitnim slučajevima, **uvek koristite direktan glasovni poziv hitnim službama**, a ne tekstualne poruke.
+Txtura podržava prijem hitnih sistemskih upozorenja (Wireless Emergency Alerts) i lokalno prepoznavanje zvaničnih obaveštenja, uključujući sistem „Pronađi me“ u Republici Srbiji:
+- **Sistem „Pronađi me“:** Prilikom prijema zvaničnog SMS obaveštenja o nestanku maloletnog lica (`pronadjime.mup.gov.rs`), aplikacija poruku oglašava kao hitno obaveštenje najvišeg prioriteta uz poseban zvuk uzbune.
+- **Pozivanje hitnih službi:** Slanje SMS poruka na brojeve hitnih službi (npr. 112, 192, 193, 194) zavisi isključivo od tehničke podrške i pokrivenosti vašeg mobilnog operatera. U situacijama opasnim po život, **uvek koristite direktan telefonski poziv hitnim službama**, a ne slanje poruka.
 
 ---
 
